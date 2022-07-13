@@ -1,13 +1,10 @@
 const passport = require("passport")
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt')
-
 //============================[Base de Datos Usuarios]============================
 const UsuariosDAOFactory = require("../persistencia/DAOs/UsuarioDAOFactory.class")
 const DAOusr = UsuariosDAOFactory.get()
-
 const logger = require('../loggers/logger')
-
 
 /* ========= Configuracion bcrypt =================== */
 const rounds = 12

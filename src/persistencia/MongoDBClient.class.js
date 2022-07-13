@@ -15,7 +15,6 @@ module.exports = class MongoDBClient extends DBClient {
         try {
             await this.client.connect(config.mongodb.connstr, config.mongodb.options);
             this.connected = true;
-
             logger.info('Base de datos conectada');
         } catch (error) {
             throw new CustomError(500, "Error al conectarse a mongodb", error);
@@ -26,7 +25,6 @@ module.exports = class MongoDBClient extends DBClient {
         try {
             await this.client.connection.close();
             this.connected = false;
-
             logger.info('Base de datos desconectada');
         } catch (error) {
             throw new CustomError(500, "Error al desconectarse a mongodb", error);

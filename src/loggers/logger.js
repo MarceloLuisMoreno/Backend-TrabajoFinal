@@ -2,7 +2,6 @@ const winston = require('winston')
 // cargo las configuraciones del sistema de .ENV
 const config = require("../config/config")
 
-
 function buildProdLogger() {
   const prodLogger = winston.createLogger({
     transports: [
@@ -42,7 +41,6 @@ function buildDevLogger() {
   })
   return devLogger
 }
-
 
 if (config.sistema === 'PROD') {
   logger = buildProdLogger()
