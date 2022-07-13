@@ -1,6 +1,7 @@
 const dotenv = require("dotenv")
 dotenv.config()
 
+
 const config = {
     sistema: process.env.SISTEMA || 'PROD',
     administrador: process.env.ADMINISTRADOR || 'false',
