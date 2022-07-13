@@ -5,7 +5,7 @@ const socket = io.connect();
 let url = window.location.href
 if (url.includes("localhost"))
     url = "http://localhost:8080"
-else url = "https://coderhouserterceraentrega.herokuapp.com"
+else url = "https://app-trabajo-final-backend.herokuapp.com"
 
 
 API_URLproductos = `${url}/api/productos/`
