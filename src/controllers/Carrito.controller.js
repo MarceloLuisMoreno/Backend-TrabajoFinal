@@ -187,6 +187,28 @@ async function borrarCarrito(req, res, next) {
     }
 }
 
+async function chequearPrecios(carrito) {
+    try {
+        let productos = carrito[0].productos
+        const productosChequeados = await Promise.all(productos.map(async function (element) {
+            const prod = await DAOprod.listar(element._id)
+            return {
+                _id: prod[0]._id,
+                title: prod[0].title,
+                thumbnail: prod[0].thumbnail,
+                price: prod[0].price
+            };
+        }));
+        return productosChequeados;
+    } catch (error) {
+        logger.warn(`Error al generar la orden. ${error}`);
+        return res.status(500).json({
+            error_description: 'Error del servidor.'
+        });
+    }
+}
+
+
 async function cierreCompra(req, res, next) {
     try {
         const cliente = req.params.id
@@ -198,6 +220,7 @@ async function cierreCompra(req, res, next) {
                 error_description: err
             })
         } else {
+            const productosChequeados = await chequearPrecios(carrito)
             const usuario = await DAOusuario.listar(cliente)
             const celular = usuario.celular
             const numeroOrden = await DAOordenes.cantidadOrdenes() + 1
@@ -210,7 +233,7 @@ async function cierreCompra(req, res, next) {
                 email: usuario.email,
                 direccion: usuario.direccion,
                 estadoOrden: 'Generada.',
-                productos: carrito[0].productos
+                productos: productosChequeados
             }
             const orden = await DAOordenes.guardar(ordenCompra)
             mensajeria.sms(ordenCompra, celular)

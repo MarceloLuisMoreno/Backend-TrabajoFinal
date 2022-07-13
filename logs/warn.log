@@ -2,3 +2,33 @@ Label🏷️ error: Jul-13-2022 14:49:57 - 	Error al listar un carrito id: pepit
 Label🏷️ warn: Jul-13-2022 14:53:21 - 	Error -2 - Ruta /public/img/favicon.png, Método GET no implementado.
 Label🏷️ warn: Jul-13-2022 14:53:55 - 	Error -2 - Ruta /public/img/favicon.png, Método GET no implementado.
 Label🏷️ warn: Jul-13-2022 14:53:55 - 	Error -2 - Ruta /favicon.ico, Método GET no implementado.
+Label🏷️ warn: Jul-13-2022 17:51:49 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading 'map')
+Label🏷️ warn: Jul-13-2022 17:51:49 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:05:51 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 18:07:47 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 18:19:46 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading '_id')
+Label🏷️ warn: Jul-13-2022 18:19:46 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:44:06 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading '_id')
+Label🏷️ warn: Jul-13-2022 18:44:06 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:45:57 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading '_id')
+Label🏷️ warn: Jul-13-2022 18:45:57 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:49:16 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading '_id')
+Label🏷️ warn: Jul-13-2022 18:49:16 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:50:02 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading '_id')
+Label🏷️ warn: Jul-13-2022 18:50:02 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:54:02 - 	Error al generar la orden. TypeError: Cannot read properties of undefined (reading 'id')
+Label🏷️ warn: Jul-13-2022 18:54:02 - 	Error server: ReferenceError: res is not defined
+Label🏷️ warn: Jul-13-2022 18:57:02 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 18:58:23 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:00:17 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:02:01 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:02:45 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:04:11 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:07:00 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:08:41 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:10:29 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:13:02 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:22:16 - 	Error server: ReferenceError: mladfasdf is not defined
+Label🏷️ warn: Jul-13-2022 19:24:55 - 	Error server: TypeError: Cannot read properties of undefined (reading 'map')
+Label🏷️ warn: Jul-13-2022 19:32:58 - 	Error server: TypeError: Cannot read properties of undefined (reading 'map')
+Label🏷️ warn: Jul-13-2022 19:42:10 - 	Error server: ReferenceError: adsfasdfadsf is not defined
