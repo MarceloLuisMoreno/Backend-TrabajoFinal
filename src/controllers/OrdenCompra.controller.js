@@ -24,52 +24,6 @@ async function listar(req, res) {
     }
 }
 
-async function checkOut(req, res) {
-    try {
-        const user = await User.findById(req.user._id);
-        let {
-            email,
-            fullname
-        } = user;
-        const cart = await cartsDao.get(user);
-        const {
-            deliveryAddress
-        } = req.body;
-        const productsInCart = await Promise.all(
-            cart.products.map(async (element) => {
-                const product = await Products.findById(element.productId);
-                return {
-                    product: product.name,
-                    description: product.description,
-                    price: product.price,
-                    quantity: element.quantity,
-                };
-            })
-        );
-        const newOrderData = {
-            userName: fullname,
-            products: productsInCart,
-            userEmail: email,
-            date: moment(new Date()).format('DD/MM/YY HH:mm'),
-            state: 'Generada',
-            deliveryAddress: deliveryAddress,
-        };
-        const newOrder = await ordersDao.create(newOrderData);
-        checkOutEMail(newOrderData);
-        await cartsDao.delete(cart._id);
-        const info = `Orden de compra creada con éxito.`
-        logger.info(info)
-        res.status(200).json({
-            message: info
-        });
-    } catch (error) {
-        logger.warn(`Error al generar la orden. ${error}`);
-        return res.status(500).json({
-            error_description: 'Error del servidor.'
-        });
-    }
-}
-
 async function guardar(req, res) {
     try {
         const id = req.params.id

@@ -34,8 +34,9 @@ class CarritosDAOMongoDB extends DAO {
                 }
             })
         } catch (error) {
-            const cuserr = new CustomError(500, `Error al listar Carrito id ${id}`, error);
-            logger.error(cuserr);
+            const cuserr = new CustomError(200, `Carrito vacío id ${id}`, error);
+            logger.info(cuserr);
+            return []
         }
     }
 

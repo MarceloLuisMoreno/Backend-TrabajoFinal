@@ -13,7 +13,7 @@ router.post("/:id", middlewares.usersAuth, carritos.crearNuevoCarrito)
 router.delete("/:id", middlewares.usersAuth, carritos.borrarCarrito)
 
 /* GET: '/:id/productos' - Me permite listar todos los productos guardados en el carrito */
-router.get("/:id/productos", middlewares.usersAuth, carritos.listarCarrito)
+router.get("/:id/productos", carritos.listarCarrito)
 
 /* PUT: '/:id/productos' - Para incorporar productos al carrito por su id de producto */
 router.put("/:id/productos", middlewares.usersAuth, carritos.incorporarProductoCarrito)

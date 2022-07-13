@@ -27,12 +27,10 @@ async function listarCarrito(req, res) {
     try {
         const id = req.params.id
         let carrito = await DAOcart.leerCarritoCliente(id)
-        if (!carrito || carrito.length < 1) {
-            const err = `Error al listar un carrito id: ${id}`
-            logger.error(err)
-            return res.status(400).json({
-                error_description: err
-            })
+        if (carrito === [DAOcart]) {
+            const info = `Carrito vacío id: ${id}`
+            logger.info(info)
+            return []
         } else {
             res.status(200).json(carrito);
         }

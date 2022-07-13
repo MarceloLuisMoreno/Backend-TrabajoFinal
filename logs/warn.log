@@ -1,0 +1,4 @@
+Label🏷️ error: Jul-13-2022 14:49:57 - 	Error al listar un carrito id: pepito@gmail.com
+Label🏷️ warn: Jul-13-2022 14:53:21 - 	Error -2 - Ruta /public/img/favicon.png, Método GET no implementado.
+Label🏷️ warn: Jul-13-2022 14:53:55 - 	Error -2 - Ruta /public/img/favicon.png, Método GET no implementado.
+Label🏷️ warn: Jul-13-2022 14:53:55 - 	Error -2 - Ruta /favicon.ico, Método GET no implementado.
